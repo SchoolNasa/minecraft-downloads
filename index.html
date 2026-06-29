@@ -8,62 +8,80 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #0a2540, #1b4f72, #21618c);
-      background-attachment: fixed;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 
-    .container {
-      flex: 1;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 250px;
-      background: rgba(0, 30, 60, 0.6);
-      border-radius: 20px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 8px 30px rgba(0,0,50,0.6);
-    }
+    background:
+        linear-gradient(
+            rgba(2, 0, 120, 0.45),
+            rgba(20,0,40,.55)
+        ),
+        url("img/background.png");
 
-    h1, h2, h3, p {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: white;
+}
+
+    .container{
+    max-width:1000px;
+    margin:40px auto;
+
+    background:rgba(15,15,20,.70);
+
+    backdrop-filter:blur(12px);
+
+    border:2px solid rgba(180,80,255,.35);
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 30px rgba(120,0,255,.3);
+}
+    h1, h2, p {
       text-align: center;
       margin: 10px 0;
+    }
+
+    h3{
+      text-align: center;
+      margin: 0px 0;
     }
 
     h1 {
       font-size: 2.5rem;
       font-weight: 700;
-      color: #66ccff;
-      text-shadow: 0 0 10px rgba(0,150,255,0.8);
-    }
-        h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #66ccff;
-      text-shadow: 0 0 10px rgba(0,150,255,0.8);
+      color: #ffd900ce;
+      text-shadow: 0 0 10px rgba(70, 156, 0, 0.253);
     }
 
-    h3 {
+
+    h1 {
       font-size: 2.5rem;
       font-weight: 700;
-      color: #66ccff;
-      text-shadow: 0 0 10px rgba(0,150,255,0.8);
+      color: #ffd900ce;
+      text-shadow: 0 0 10px rgba(70, 156, 0, 0.253);
+    }
+    
+    h3 {
+      font-size: 3rem;
+      color: #ffffff;
+      text-shadow: 0 0 10px rgb(26, 26, 26);
     }
 
     .game-buttons {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* always 3 columns */
+      grid-template-columns: repeat(2, 1fr); /* always 3 columns */
       gap: 25px;
       margin-top: 40px;
     }
 
     .game-buttons button {
-      background: rgba(0, 80, 150, 0.2);
-      border: 2px solid rgba(0,150,255,0.4);
+      background: rgba(0, 150, 112, 0.2);
+      border: 2px solid rgba(0, 255, 136, 0.4);
       border-radius: 15px;
       padding: 20px;
       color: #e0f7ff;
@@ -75,13 +93,13 @@
       justify-content: center;
       text-align: center;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,50,0.4);
+      box-shadow: 0 4px 15px rgba(0, 124, 83, 0.644);
     }
 
     .game-buttons button:hover {
       transform: translateY(-6px);
-      background: rgba(0,120,255,0.3);
-      border-color: #66ccff;
+      background: rgba(0, 255, 136, 0.671);
+      border-color: #00ff6296;
       box-shadow: 0 8px 25px rgba(0,0,80,0.6);
     }
 
@@ -102,30 +120,24 @@
       backdrop-filter: blur(6px);
       margin-top: auto;
     }
+    .logo{
+    width:340px;
+    display:block;
+    margin:auto;
+    margin-bottom:0px;
+    filter: drop-shadow(0 0 20px #8a2eff);
+}
   </style>
 </head>
 <body>
+  <img src="img/logo.png" class="logo">
+<h3>SchoolNasa</h3>
   <div class="container">
-    <h1>Linux</h1>
+    <h1>Downloads</h1>
 
     <div class="game-buttons">
-      <button onclick="openGame('downloads/TLauncherLINUX.jar')"> <img src="img/TL.png">TLauncher</button>
-      <button onclick="openGame('downloads/SKLAUCNHER_LINUX.jar')"> <img src="downloads/SKlauncher.png">SKlauncher</button>
-      <button onclick="openGame('downloads/LegacyLauncherLINUXl.jar')"> <img src="img/legacyLaun.png">Legacy Launcher</button>
-      <button onclick="openGame('downloads/cmclient-universal-installer.jar')"> <img src="img/cmclient.webp">CmClient</button>
-      <button onclick="openGame('https://www.mediafire.com/file/qh5zp5sf5czaepi/PolyMC-Linux-7.0-x86_64.AppImage/file')"> <img src="img/polymc.png">PolyMC</button>
-      <button onclick="openGame('https://www.mediafire.com/file/3u1otsg233vwq0j/Lunar+Client-3.5.11-ow.AppImage/file')"> <img src="img/Lunar.png">Lunar Client</button>
+      <button onclick="openGame('https://schoolnasa.github.io/PolyMC-Download')"> <img src="img/polymc.png">PolyMC</button>
       
-    </div>
-    <h2>Windows</h2>
-        <div class="game-buttons">
-      <button onclick="openGame('downloads/TL_WINDOWS.exe')"> <img src="img/TL.png">TLauncher</button>
-          <button onclick="openGame('downloads/SKLAUCNHER_WINDOWS.jar')"> <img src="downloads/SKlauncher.png">SKlauncher</button>
-      <button onclick="openGame('https://tlaun.ch/dl/mcl/exe')"> <img src="img/legacyLaun.png">Legacy Launcher</button>
-          <button onclick="openGame('downloads/cmclient-universal-installer.jar')"> <img src="img/cmclient.webp">CmClient</button>
-          <button onclick="openGame('https://www.mediafire.com/file/p4k3klem6brntgf/PolyMC-Windows-Portable-7.0.zip/file')"> <img src="img/polymc.png">PolyMC</button>
-          <button onclick="openGame('https://www.mediafire.com/file/gu90iua0bdrcgr4/Lunar+Client+-+Installer.exe/file')"> <img src="img/Lunar.png">Lunar Client</button>
-    </div>
     <h1>Clients/Modpacks</h1>
     <p>Tudo funciona piratex.</p>
     <div class="game-buttons">
